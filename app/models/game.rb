@@ -1,5 +1,5 @@
 class Game < ApplicationRecord
   belongs_to :user
-  enum status: { backlog: 0, playing: 1, completed: 2, wishlist: 3 }
+  enum status: { Backlog: 0, Playing: 1, Completed: 2, Wishlist: 3 }
   validates :title, :status, :platform, presence: true
 end

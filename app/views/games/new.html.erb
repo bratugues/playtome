@@ -1,0 +1,6 @@
+<%=simple_form_for @game do |f|%>
+  <%=f.input :title%>
+  <%=f.input :platform %>
+  <%=f.input :status, collection: Game.statuses.keys %>
+  <%=f.submit "Add game..."%>
+<%end%>
