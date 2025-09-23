@@ -1,0 +1,8 @@
+<h1>Edit game...</h1>
+
+<%=simple_form_for @game do |f|%>
+  <%=f.input :title%>
+  <%=f.input :platform %>
+  <%=f.input :status, collection: Game.statuses.keys %>
+  <%=f.submit "Update game..."%>
+<%end%>
