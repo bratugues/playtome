@@ -5,14 +5,16 @@ class GamesController < ApplicationController
   end
 
   def show
+    @game = Game.find(params[:id])
   end
-  
+
   def new
     @game = Game.new
   end
 
   def create
     @game = Game.new(games_params)
+    @game.user = current_user
     if @game.save
       redirect_to @game, notice: "Game added!"
     else
