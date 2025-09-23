@@ -3,3 +3,7 @@
 <p><%=@game.platform%></p>
 <h4>Status:</h4>
 <p><%=@game.status%></p>
+
+<%=link_to "Edit game...", edit_game_path%>
+<%=link_to "Delete game...", game_path(@game), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+<%=link_to "Back", games_path%>
