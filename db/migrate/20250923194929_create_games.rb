@@ -3,7 +3,7 @@ class CreateGames < ActiveRecord::Migration[7.1]
     create_table :games do |t|
       t.string :title
       t.string :platform
-      t.string :status
+      t.integer :status, default: 0
       t.references :user, null: false, foreign_key: true
 
       t.timestamps

@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_09_23_194929) do
   create_table "games", force: :cascade do |t|
     t.string "title"
     t.string "platform"
-    t.string "status"
+    t.integer "status", default: 0
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
