@@ -10,4 +10,14 @@
   </ul>
 <%end%>
 
+<%@games.each do |game|%>
+<div class="game-card mb-3">
+  <%= image_tag "placeholder", alt: "Le Wagon", width: 200 %>
+  <h5><%=game.title%></h5>
+  <p><%=game.platform%></p>
+  <p><%=game.status%></p>
+  <%=link_to "Check this game", game_path(game), class: "btn btn-primary"%>
+</div>
+<%end%>
+
 <%=link_to "Add a new game", new_game_path%>
