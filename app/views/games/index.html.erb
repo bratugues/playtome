@@ -1,23 +1,29 @@
 <h1>My games</h1>
 
-<%@games.each do |game|%>
-  <ul>
-    <li>
-      <%=link_to game do%>
-        <%=game.title%>
-      <%end%>
-    </li>
-  </ul>
-<%end%>
+<%# <%@games.each do |game|%>
+  <%# <ul> %>
+    <%# <li> %>
+      <%# <%=link_to game do%>
+        <%# <%=game.title%>
+      <%# <%end %>
+    <%# </li> %>
+  <%# </ul> %>
+<%# <%end %>
 
-<%@games.each do |game|%>
-<div class="game-card mb-3">
-  <%= image_tag "placeholder", alt: "Le Wagon", width: 200 %>
-  <h5><%=game.title%></h5>
-  <p><%=game.platform%></p>
-  <p><%=game.status%></p>
-  <%=link_to "Check this game", game_path(game), class: "btn btn-primary"%>
+<div class="game-container">
+  <%@games.each do |game|%>
+    <div class="game-card mb-3">
+      <%= image_tag "placeholder", alt: "Le Wagon", class:"game-img" %>
+      <div class="card-body">
+        <h5><%=game.title%></h5>
+        <p><%=game.platform%></p>
+        <p><%=game.status%></p>
+      </div>
+      <div class="card-footer">
+        <%=link_to "Check this game", game_path(game), class: "btn btn-primary"%>
+      </div>
+    </div>
+  <%end%>
 </div>
-<%end%>
 
 <%=link_to "Add a new game", new_game_path%>
