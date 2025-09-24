@@ -1,6 +1,15 @@
 // Define variables for your color scheme
 
 // For example:
+$red: #FD1015;
+$blue: #0D6EFD;
+$yellow: #FFC65A;
+$orange: #E67E22;
+$green: #1EDD88;
+$gray: #0E0000;
+$light-gray: #F4F4F4;
+
+// For example:
 $nintendo-red: #E60012;
 $sky-blue: #0070D1;
 
@@ -20,7 +29,6 @@ $background-card: $brand-white-pure;
 
 $text-primary: $brand-gray-dark;
 $text-secondary: lighten($brand-gray-dark, 25%);
-
 
 /*
 // Tema Escuro (Dark Mode) - Basta descomentar para usar
