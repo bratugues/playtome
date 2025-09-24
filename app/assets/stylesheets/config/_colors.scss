@@ -1,10 +1,36 @@
 // Define variables for your color scheme
 
 // For example:
-$red: #FD1015;
-$blue: #0D6EFD;
-$yellow: #FFC65A;
-$orange: #E67E22;
-$green: #1EDD88;
-$gray: #0E0000;
-$light-gray: #F4F4F4;
+$nintendo-red: #E60012;
+$sky-blue: #0070D1;
+
+$brand-white-ice: #F9F9F9;
+$brand-white-pure: #FFFFFF;
+$brand-gray-dark: #212121;
+$brand-gray-light: #E2E8F0;
+$brand-blue-dark: #1A202C;
+$brand-blue-medium: #2D3748;
+
+// Tema Claro (Light Mode)
+$primary-color: $nintendo-red;
+$accent-color: $sky-blue;
+
+$background-main: $brand-white-ice;
+$background-card: $brand-white-pure;
+
+$text-primary: $brand-gray-dark;
+$text-secondary: lighten($brand-gray-dark, 25%);
+
+
+/*
+// Tema Escuro (Dark Mode) - Basta descomentar para usar
+
+$primary-color: lighten($nintendo-red, 5%); // Levemente mais claro para se destacar no escuro
+$accent-color: lighten($sky-blue, 10%);
+
+$background-main: $brand-blue-dark;
+$background-card: $brand-blue-medium;
+
+$text-primary: $brand-gray-light;
+$text-secondary: darken($brand-gray-light, 25%);
+*/
