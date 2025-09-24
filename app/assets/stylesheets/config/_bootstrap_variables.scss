@@ -7,22 +7,22 @@
 // General style
 $font-family-sans-serif: $body-font;
 $headings-font-family:   $headers-font;
-$body-bg:                $light-gray;
+$body-bg:                $brand-white-ice;
 $font-size-base:         1rem;
 
 // Colors
-$body-color: $gray;
-$primary:    $blue;
-$success:    $green;
-$info:       $yellow;
-$danger:     $red;
-$warning:    $orange;
+$body-color: $brand-gray-dark;
+$primary:    $nintendo-red;
+$success:    #28a745;
+$info:       $sky-blue;
+$danger:     $nintendo-red;
+$warning:    #ffc107;
 
 // Buttons & inputs' radius
-$border-radius-sm:            .0625rem;
-$border-radius:               .125rem;
-$border-radius-lg:            .25rem;
-$border-radius-xl:            .5rem;
-$border-radius-xxl:           1rem;
+$border-radius-sm:   0.25rem;
+$border-radius:      0.5rem;
+$border-radius-lg:   1rem;
+$border-radius-xl:   1.5rem;
+$border-radius-xxl:  2rem;
 
 // Override other variables below!
