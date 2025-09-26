@@ -11,4 +11,14 @@ export default class extends Controller {
   open(){
     this.modal.show()
   }
+
+  close(){
+    this.modal.hide()
+  }
+
+  submitEnd(e){
+    if (e.detail.success) {
+      this.close();
+    }
+  }
 }

@@ -16,10 +16,14 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(games_params)
     @game.user = current_user
-    if @game.save
-      redirect_to game_path(@game), notice: "Game added!"
-    else
-      render :new, status: :unprocessable_entity
+    respond_to do |format|
+      if @game.save
+        format.html { redirect_to games_path, notice: "Game added!" }
+        format.turbo_stream
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.turbo_stream { render :new, status: :unprocessable_entity }
+      end
     end
   end
 

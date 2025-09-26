@@ -1,0 +1,6 @@
+<%=simple_form_for game, data: { action: "turbo:submit-end->modal#submitEnd" } do |f|%>
+  <%=f.input :title%>
+  <%=f.input :platform %>
+  <%=f.input :status, collection: Game.statuses.keys %>
+  <%=f.submit "Add game...", class: "btn btn-primary"%>
+<%end%>

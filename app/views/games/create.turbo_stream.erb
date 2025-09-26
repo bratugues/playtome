@@ -1,0 +1,7 @@
+<%= turbo_stream.append "game-list-container", @game do %>
+  <%= render @game %>
+<% end %>
+
+<%= turbo_stream.replace "new_game" do %>
+  <%= render "form", game: Game.new %>
+<% end %>
