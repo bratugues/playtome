@@ -37,7 +37,9 @@
 <%= turbo_frame_tag "games" do %>
   <div class="game-container" id="game-list-container">
     <%@games.each do |game|%>
-      <%=render "games/game", game: game%>
+      <%if game.user == current_user%>
+        <%=render "games/game", game: game%>
+       <%end%>
     <%end%>
   </div>
 <%end%>
